@@ -11,7 +11,7 @@ Vcs-Bzr: https://code.launchpad.net/~tkren/+junk/asp/
 
 Package: dlvhex2
 Architecture: any
-Depends: libboost (>= 1.43), libdlvhex2-base, libdlvhex2-aspsolver, libdlvhex2-internalplugins, libdlvhex2-mlpsolver,
+Depends: libdlvhex2-base, libdlvhex2-aspsolver, libdlvhex2-internalplugins, libdlvhex2-mlpsolver,
  ${shlibs:Depends}, ${misc:Depends}
 Description: A solver for HEX-programs
  dlvhex2 is a prototype solver for HEX-programs which integrate
