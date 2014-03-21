@@ -1,0 +1,17 @@
+Source: dlvhex-mcsieplugin
+Priority: optional
+Maintainer: Thomas Krennwallner <tkren@kr.tuwien.ac.at>
+Build-Depends: quilt (>= 0.46-7~), debhelper (>= 7), autotools-dev,
+ pkg-config, libdlvhex2-base-dev, libboost-all-dev (>= 1.43)
+Standards-Version: 3.9.1
+Section: libs
+Homepage: http://www.kr.tuwien.ac.at/research/systems/mcsie/
+
+Package: dlvhex-mcsieplugin
+Section: libs
+Architecture: any
+Depends: dlvhex, ${shlibs:Depends}, ${misc:Depends}
+Enhances: dlvhex
+Suggests: dlvhex-doc
+Description: dlvhex MCS-IE plugin
+ The MCS-IE plugin for dlvhex.

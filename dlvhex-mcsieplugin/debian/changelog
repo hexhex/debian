@@ -1,0 +1,19 @@
+dlvhex-mcsieplugin (2.0.0-1~pangolin) maverick; urgency=low
+
+ -- Christoph Redl <redl@kr.tuwien.ac.at>  Fri, 21 Mar 2014 13:40:35 +0200
+
+dlvhex-mcsieplugin (1.7.1-2~maverick1) maverick; urgency=low
+
+  * Tag distro-series.
+  
+  * Fix Standards-Version, Homepage, and Priority.
+
+  * Suggests dlvhex-doc.
+
+ -- Thomas Krennwallner <tkren@kr.tuwien.ac.at>  Mon, 11 Oct 2010 13:40:35 +0200
+
+dlvhex-mcsieplugin (1.7.1-1) lucid; urgency=low
+
+  * Initial release.
+
+ -- Thomas Krennwallner <tkren@kr.tuwien.ac.at>  Tue, 22 Jun 2010 11:35:44 +0200

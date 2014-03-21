@@ -1,0 +1,15 @@
+dlvhex-stringplugin (1.7.0-2~maverick1) maverick; urgency=low
+
+  * Tag distro-series.
+  
+  * Fix Standards-Version and Priority.
+
+  * Suggests dlvhex-doc.
+
+ -- Thomas Krennwallner <tkren@kr.tuwien.ac.at>  Mon, 11 Oct 2010 14:43:49 +0200
+
+dlvhex-stringplugin (1.7.0-1) lucid; urgency=low
+
+  * Initial release.
+
+ -- Thomas Krennwallner <tkren@kr.tuwien.ac.at>  Tue, 22 Jun 2010 11:35:44 +0200

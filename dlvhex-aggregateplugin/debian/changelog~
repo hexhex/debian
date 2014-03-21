@@ -1,0 +1,23 @@
+dlvhex-aggregateplugin (1.7.0-3~maverick1) maverick; urgency=low
+
+  * Tag distro-series.
+  
+  * Fix Standards-Version and Priority.
+
+  * Suggests dlvhex-doc.
+
+ -- Thomas Krennwallner <tkren@kr.tuwien.ac.at>  Mon, 11 Oct 2010 06:24:47 +0200
+
+dlvhex-aggregateplugin (1.7.0-2) lucid; urgency=low
+
+  * Add pkg-config to Build-Depends.
+
+  * Set DEB_BUILD_OPTIONS to nocheck to turn off the test suite.
+
+ -- Thomas Krennwallner <tkren@kr.tuwien.ac.at>  Sun, 18 Jul 2010 21:12:59 +0200
+
+dlvhex-aggregateplugin (1.7.0-1) lucid; urgency=low
+
+  * Initial release.
+
+ -- Thomas Krennwallner <tkren@kr.tuwien.ac.at>  Tue, 22 Jun 2010 11:35:44 +0200
