@@ -1,0 +1,58 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+#
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+#
+# Modified to make a template file for a multi-binary package with separated
+# build-arch and build-indep targets  by Bill Allombert 2001
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# This has to be exported to make some magic below work.
+export DH_OPTIONS
+
+build: build-stamp
+build-stamp:
+	dh_testdir
+
+	echo -e "#!/bin/sh\nexit 0" > ./dlv
+	chmod +x ./dlv
+
+	dh_auto_configure -- PATH=.:$(PATH)
+	$(MAKE) all html
+
+	touch build-stamp
+
+clean:
+	dh --with quilt $@
+	rm -f ./dlv
+
+
+install:
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+
+	$(MAKE) install DESTDIR=`pwd`/debian/tmp
+	$(MAKE) install-html DESTDIR=`pwd`/debian/tmp docdir=/usr/share/doc/dlvhex-doc
+
+	dh_install
+
+
+binary-indep: build install
+	dh --with quilt $@
+
+
+binary-arch: build install
+	dh --with quilt $@
+
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install

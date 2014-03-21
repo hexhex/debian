@@ -1,0 +1,10 @@
+Document: dlvhex-doc
+Title: dlvhex Source Documentation
+Author: Thomas Krennwallner and Roman Schindlauer and Peter Schueller
+Abstract: dlvhex library documentation
+ Doxygen documentation of the dlvhex library code.
+Section: Programming/C++
+
+Format: HTML
+Index: /usr/share/doc/dlvhex-doc/html/index.html
+Files: /usr/share/doc/dlvhex-doc/html/*

@@ -1,0 +1,107 @@
+Source: dlvhex2
+Section: interpreters
+Priority: optional
+Maintainer: Christoph Redl <redl@kr.tuwien.ac.at>
+Build-Depends: quilt (>= 0.46-7~), debhelper (>= 7), autotools-dev,
+ libboost1.55-all-dev, doxygen,
+ libcurl4-openssl-dev|libcurl4-gnutls-dev|libcurl-dev
+Standards-Version: 3.9.1
+Homepage: http://www.kr.tuwien.ac.at/research/systems/dlvhex/
+Vcs-Bzr: https://code.launchpad.net/~tkren/+junk/asp/
+
+Package: dlvhex2
+Architecture: any
+Depends: libboost (>= 1.43), dlv-installer, libdlvhex2-base, libdlvhex2-aspsolver, libdlvhex2-internalplugins, libdlvhex2-mlpsolver
+ ${shlibs:Depends}, ${misc:Depends}
+Description: A solver for HEX-programs
+ dlvhex2 is a prototype solver for HEX-programs which integrate
+ Answer-Set Programs with higher-order reasoning and external
+ computation sources. It comes with a full-fledged plug-in framework
+ for rapid extension development.
+
+Package: dlvhex2-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Description: Documentation for dlvhex2 and libraries
+ dlvhex2 is a prototype solver for HEX-programs which integrate
+ Answer-Set Programs with higher-order reasoning and external
+ computation sources. It comes with a full-fledged plug-in framework
+ for rapid extension development.
+ .
+ This is the documentation of dlvhex2 and its libraries.
+
+Package: libdlvhex2-base
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Libraries for the dlvhex2 solver
+ dlvhex2 is a prototype solver for HEX-programs which integrate
+ Answer-Set Programs with higher-order reasoning and external
+ computation sources. It comes with a full-fledged plug-in framework
+ for rapid extension development.
+ .
+ This package provides the base shared libraries for dlvhex2.
+
+Package: libdlvhex2-base-dev
+Section: libdevel
+Architecture: any
+Depends: libaspsolver2-dev, ${shlibs:Depends}, ${misc:Depends}
+Description: Development files for the dlvhex2 solver
+ dlvhex2 is a prototype solver for HEX-programs which integrate
+ Answer-Set Programs with higher-order reasoning and external
+ computation sources. It comes with a full-fledged plug-in framework
+ for rapid extension development.
+ .
+ This is the development package for libdlvhex2-base and provides
+ header files and archives of the dlvhex2 libraries.
+
+Package: libaspsolver2-dev
+Section: libdevel
+Architecture: any
+Depends: libdlvhex2-base-dev, ${shlibs:Depends}, ${misc:Depends}
+Description: Development files for libdlvhex2-aspsolver
+ dlvhex2 is a prototype solver for HEX-programs which integrate
+ Answer-Set Programs with higher-order reasoning and external
+ computation sources. It comes with a full-fledged plug-in framework
+ for rapid extension development.
+ .
+ This is the development package for libdlvhex2-aspsolver and provides
+ header files and archives of this libraries.
+
+Package: libdlvhex2-aspsolver
+Section: libs
+Architecture: any
+Depends: libdlvhex2-base, ${shlibs:Depends}, ${misc:Depends}
+Description: Libraries for libdlvhex2-aspsolver
+ dlvhex2 is a prototype solver for HEX-programs which integrate
+ Answer-Set Programs with higher-order reasoning and external
+ computation sources. It comes with a full-fledged plug-in framework
+ for rapid extension development.
+ .
+ This package provides the shared libraries for libdlvhex2-aspsolver.
+
+Package: libdlvhex2-internalplugins
+Section: libs
+Architecture: any
+Depends: libdlvhex2-base, ${shlibs:Depends}, ${misc:Depends}
+Description: Libraries for libdlvhex2-internalplugins
+ dlvhex2 is a prototype solver for HEX-programs which integrate
+ Answer-Set Programs with higher-order reasoning and external
+ computation sources. It comes with a full-fledged plug-in framework
+ for rapid extension development.
+ .
+ This package provides the shared libraries for libdlvhex2-aspsolver.
+
+Package: libdlvhex2-mlpsolver
+Section: libs
+Architecture: any
+Depends: libdlvhex2-base, ${shlibs:Depends}, ${misc:Depends}
+Description: Libraries for libdlvhex2-mlpsolver
+ dlvhex2 is a prototype solver for HEX-programs which integrate
+ Answer-Set Programs with higher-order reasoning and external
+ computation sources. It comes with a full-fledged plug-in framework
+ for rapid extension development.
+ .
+ This package provides the shared libraries for libdlvhex2-mlpsolver.
+
