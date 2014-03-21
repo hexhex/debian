@@ -10,8 +10,8 @@ Homepage: http://www.kr.tuwien.ac.at/research/systems/dlvhex/
 Package: dlvhex-aggregateplugin
 Section: libs
 Architecture: any
-Depends: dlvhex, ${shlibs:Depends}, ${misc:Depends}
-Enhances: dlvhex
-Suggests: dlvhex-doc
+Depends: dlvhex2, ${shlibs:Depends}, ${misc:Depends}
+Enhances: dlvhex2
+Suggests: dlvhex2-doc
 Description: dlvhex aggregate plugin
  The aggregate plugin for dlvhex.
