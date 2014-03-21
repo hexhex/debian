@@ -3,7 +3,7 @@ Section: interpreters
 Priority: optional
 Maintainer: Christoph Redl <redl@kr.tuwien.ac.at>
 Build-Depends: quilt (>= 0.46-7~), debhelper (>= 7), autotools-dev,
- libboost1.43-all-dev, doxygen,
+ libboost1.55-all-dev, doxygen,
  libcurl4-openssl-dev|libcurl4-gnutls-dev|libcurl-dev
 Standards-Version: 3.9.1
 Homepage: http://www.kr.tuwien.ac.at/research/systems/dlvhex/
