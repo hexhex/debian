@@ -3,7 +3,7 @@ Section: interpreters
 Priority: optional
 Maintainer: Christoph Redl <redl@kr.tuwien.ac.at>
 Build-Depends: quilt (>= 0.46-7~), debhelper (>= 7), autotools-dev,
- libboost1.55-all-dev, doxygen,
+ libboost-all-dev (>= 1.43), doxygen,
  libcurl4-openssl-dev|libcurl4-gnutls-dev|libcurl-dev
 Standards-Version: 3.9.1
 Homepage: http://www.kr.tuwien.ac.at/research/systems/dlvhex/
@@ -11,7 +11,7 @@ Vcs-Bzr: https://code.launchpad.net/~tkren/+junk/asp/
 
 Package: dlvhex2
 Architecture: any
-Depends: libboost (>= 1.43), dlv-installer, libdlvhex2-base, libdlvhex2-aspsolver, libdlvhex2-internalplugins, libdlvhex2-mlpsolver
+Depends: libboost-all-dev (>= 1.43), libdlvhex2-base, libdlvhex2-aspsolver, libdlvhex2-internalplugins, libdlvhex2-mlpsolver
  ${shlibs:Depends}, ${misc:Depends}
 Description: A solver for HEX-programs
  dlvhex2 is a prototype solver for HEX-programs which integrate
