@@ -12,5 +12,7 @@
 # turn off test suite for now
 export DEB_BUILD_OPTIONS=nocheck
 
+override_dh_usrlocal:
+
 %:
 	dh --with quilt  $@

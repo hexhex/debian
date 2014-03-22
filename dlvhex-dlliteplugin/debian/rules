@@ -15,12 +15,11 @@ export DEB_BUILD_OPTIONS=nocheck
 # This has to be exported to make some magic below work.
 export DH_OPTIONS
 
+override_dh_usrlocal:
+
 build: build-stamp
 build-stamp:
 	dh_testdir
-
-	echo -e "#!/bin/sh\nexit 0" > ./RacerPro
-	chmod +x ./RacerPro
 
 	dh_auto_configure -- PATH=.:$(PATH)
 	$(MAKE) all
@@ -29,7 +28,6 @@ build-stamp:
 
 clean:
 	dh --with quilt $@
-	rm -f ./RacerPro
 
 
 install:
