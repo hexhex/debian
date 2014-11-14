@@ -1,3 +1,5 @@
+#!/usr/bash
+
 if [[ $1 -eq 1 ]] && [[ "$1" == "all" ]]; then
 	./buildpackage "dlvhex2" "2.4.0"
 	./buildpackage "dlvhex2-aggregateplugin" "2.0.0"
