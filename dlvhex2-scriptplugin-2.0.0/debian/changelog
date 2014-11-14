@@ -1,6 +1,8 @@
 dlvhex-scriptplugin (2.0.0-1~pangolin1) pangolin; urgency=low
 
- -- Christoph Redl <redl@kr.tuwien.ac.at>  Fri, 21 Mar 2014 14:43:49 +0200
+  * First release of version 2.X.
+
+ -- Christoph Redl <redl@kr.tuwien.ac.at>  Fri, 14 Nov 2014 26:01:00 +0200
 
 dlvhex-scriptplugin (1.7.1-2maverick1) maverick; urgency=low
 

@@ -1,17 +1,17 @@
-Source: dlvhex-mcsieplugin
+Source: dlvhex2-stringplugin
 Priority: optional
 Maintainer: Thomas Krennwallner <tkren@kr.tuwien.ac.at>
 Build-Depends: quilt (>= 0.46-7~), debhelper (>= 7), autotools-dev,
  pkg-config, libdlvhex2-base-dev, libboost-all-dev (>= 1.43)
 Standards-Version: 3.9.1
 Section: libs
-Homepage: http://www.kr.tuwien.ac.at/research/systems/mcsie/
+Homepage: http://www.kr.tuwien.ac.at/research/systems/dlvhex/
 
-Package: dlvhex-mcsieplugin
+Package: dlvhex2-stringplugin
 Section: libs
 Architecture: any
 Depends: dlvhex2, ${shlibs:Depends}, ${misc:Depends}
 Enhances: dlvhex2
 Suggests: dlvhex2-doc
-Description: dlvhex MCS-IE plugin
- The MCS-IE plugin for dlvhex.
+Description: dlvhex2 string plugin
+ The string plugin for dlvhex2.

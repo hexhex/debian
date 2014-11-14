@@ -1,4 +1,4 @@
-Source: dlvhex-stringplugin
+Source: dlvhex2-scriptplugin
 Priority: optional
 Maintainer: Thomas Krennwallner <tkren@kr.tuwien.ac.at>
 Build-Depends: quilt (>= 0.46-7~), debhelper (>= 7), autotools-dev,
@@ -7,11 +7,10 @@ Standards-Version: 3.9.1
 Section: libs
 Homepage: http://www.kr.tuwien.ac.at/research/systems/dlvhex/
 
-Package: dlvhex-stringplugin
+Package: dlvhex2-scriptplugin
 Section: libs
 Architecture: any
 Depends: dlvhex2, ${shlibs:Depends}, ${misc:Depends}
 Enhances: dlvhex2
-Suggests: dlvhex2-doc
-Description: dlvhex string plugin
- The string plugin for dlvhex.
+Description: dlvhex2 script plugin
+ The script plugin for dlvhex2.
