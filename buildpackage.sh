@@ -1,4 +1,4 @@
-#!/usr/bash
+#!/bin/bash
 
 if [[ $1 -eq 1 ]] && [[ "$1" == "all" ]]; then
 	./buildpackage "dlvhex2" "2.4.0"
