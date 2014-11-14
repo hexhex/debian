@@ -58,7 +58,7 @@ fi
 
 # check if the sourcecode is ready for building
 if [ ! -f $package-$version/configure ]; then
-	echo "Sourcecode is not extracted"
+	echo "Sourcecode is not extracted, will do this now"
 	temp=$(mktemp -d)
 	tar -xvzf ${package}_$version.orig.tar.gz -C $temp
 	mv $temp/*/* $package-$version/
@@ -70,5 +70,6 @@ if [ ! -f $package-$version/configure ]; then
 fi
 
 # build the package
+echo "Building package $package (version $version)"
 cd $package-$version
 dpkg-buildpackage -us -uc -d
