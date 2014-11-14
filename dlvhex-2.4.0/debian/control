@@ -84,7 +84,8 @@ Description: Libraries for libdlvhex2-aspsolver
 Package: libdlvhex2-internalplugins
 Section: libs
 Architecture: any
-Depends: libdlvhex2-base, ${shlibs:Depends}, ${misc:Depends}
+Depends: libdlvhex2-base, ${shlibs:Depends}, ${misc:Depends},
+ libpython2-all-dev (>= 2.7)
 Description: Libraries for libdlvhex2-internalplugins
  dlvhex2 is a prototype solver for HEX-programs which integrate
  Answer-Set Programs with higher-order reasoning and external

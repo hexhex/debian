@@ -23,7 +23,7 @@ build-stamp:
 	echo -e "#!/bin/sh\nexit 0" > ./dlv
 	chmod +x ./dlv
 
-	dh_auto_configure -- PATH=.:$(PATH)
+	dh_auto_configure -- --enable-python PATH=.:$(PATH)
 	$(MAKE) all html
 
 	touch build-stamp
