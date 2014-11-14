@@ -1,8 +1,8 @@
-dlvhex-mcsieplugin (2.0.0-1~pangolin) maverick; urgency=low
+dlvhex2-mcsieplugin (2.0.0-1~pangolin) maverick; urgency=low
 
   * First release of version 2.X.
 
- -- Christoph Redl <redl@kr.tuwien.ac.at>  Fri, 14 Nov 2014 26:01:00 +0200
+ -- Christoph Redl <redl@kr.tuwien.ac.at>  Fri, 14 Nov 2014 16:01:00 +0200
 
 dlvhex-mcsieplugin (1.7.1-2~maverick1) maverick; urgency=low
 

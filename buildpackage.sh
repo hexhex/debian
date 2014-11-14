@@ -1,5 +1,8 @@
 if [[ $# -ne 1 ]]; then
 	echo "This script expects the package name as single parameter"
+	echo "Supported values:"
+	echo "   dlvhex2-2.4.0"
+	echo "   dlvhex2-mcsieplugin-2.0.0"
 	exit 1
 fi
 package=$1
@@ -11,7 +14,7 @@ if [ ! -f $package.tar.gz ]; then
 	if [[ "$package" == "dlvhex2-2.4.0" ]]; then
 		wget http://sourceforge.net/projects/dlvhex/files/dlvhex/2.4.0/dlvhex-2.4.0.tar.gz -O dlvhex2-2.4.0.tar.gz
 		cp dlvhex2-2.4.0.tar.gz dlvhex2_2.4.0.orig.tar.gz
-	elif [[ "$package" == "dlvhex-mcsieplugin-2.0.0" ]]; then
+	elif [[ "$package" == "dlvhex2-mcsieplugin-2.0.0" ]]; then
 		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-mcsieplugin/2.0.0/dlvhex-mcsieplugin-2.0.0.tar.gz -O dlvhex2-mcsieplugin-2.0.0.tar.gz
 		cp dlvhex2-mcsieplugin-2.0.0.tar.gz dlvhex2-mcsieplugin_2.0.0.orig.tar.gz
 	else
