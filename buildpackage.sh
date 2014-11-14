@@ -1,9 +1,10 @@
 #!/bin/bash
 
+# process parameters
 if [[ $1 -eq 1 ]] && [[ "$1" == "all" ]]; then
 	./buildpackage "dlvhex2" "2.4.0"
 	./buildpackage "dlvhex2-aggregateplugin" "2.0.0"
-#	./buildpackage "dlvhex2-dlliteplugin" "2.0.0"
+	./buildpackage "dlvhex2-dlliteplugin" "2.0.0"
 	./buildpackage "dlvhex2-dlplugin" "2.0.0"
 	./buildpackage "dlvhex2-mcsieplugin" "2.0.0"
 	./buildpackage "dlvhex2-nestedhexplugin" "2.0.0"
@@ -16,7 +17,7 @@ if [[ $# -ne 2 ]]; then
 	echo "Supported packages and versions:"
 	echo "   dlvhex2                         (versions: 2.4.0)"
 	echo "   dlvhex2-aggregateplugin         (versions: 2.0.0)"
-#	echo "   dlvhex2-dlliteplugin            (versions: 2.0.0)"
+	echo "   dlvhex2-dlliteplugin            (versions: 2.0.0)"
 	echo "   dlvhex2-dlplugin                (versions: 2.0.0)"
 	echo "   dlvhex2-mcsieplugin             (versions: 2.0.0)"
 	echo "   dlvhex2-nestedhexplugin         (versions: 2.0.0)"
@@ -34,13 +35,13 @@ version=$2
 # check if the sourcecode is available
 if [ ! -f ${package}_$version.orig.tar.gz ]; then
 	# no: download it
-	echo "Sourcecode does not exist, trying to download package $package"
+	echo "Sourcecode in \"${package}_$version.orig.tar.gz\" does not exist, trying to download it"
 	if [[ "$package" == "dlvhex2" ]]; then
 		wget http://sourceforge.net/projects/dlvhex/files/dlvhex/$version/${package}-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	elif [[ "$package" == "dlvhex2-aggregateplugin" ]]; then
 		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-aggregateplugin/$version/${package}-$version.tar.gz -O ${package}_$version.orig.tar.gz
-#	elif [[ "$package" == "dlvhex2-dlliteplugin" ]]; then
-#		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-dlliteplugin/$version/dlvhex-dlliteplugin-$version.tar.gz -O ${package}_$version.orig.tar.gz
+	elif [[ "$package" == "dlvhex2-dlliteplugin" ]]; then
+		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-dlliteplugin/$version/${package}-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	elif [[ "$package" == "dlvhex2-dlplugin" ]]; then
 		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-dlplugin/$version/${package}-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	elif [[ "$package" == "dlvhex2-mcsieplugin" ]]; then
@@ -52,12 +53,12 @@ if [ ! -f ${package}_$version.orig.tar.gz ]; then
 	elif [[ "$package" == "dlvhex2-stringplugin" ]]; then
 		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-stringplugin/$version/${package}-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	else
-		echo "Unknown package: $package"
+		echo "Unknown package: \"$package\""
 		exit 1
 	fi
 
 	if [ ! -f ${package}_$version.orig.tar.gz ]; then
-		echo "Error: Could not find sourcecode"
+		echo "Error: Could not find sourcecode \"${package}_$version.orig.tar.gz\""
 		exit 1
 	fi
 fi
@@ -70,7 +71,7 @@ if [ ! -f $package-$version/configure ]; then
 	mv $temp/*/* $package-$version/
 	rm -rf $temp
 	if [ ! -f $package-$version/configure ]; then
-		echo "Error: Cound not prepare sourcecode for building"
+		echo "Error: Cound not extract sourcecode for building"
 		exit 1
 	fi
 fi
@@ -78,4 +79,8 @@ fi
 # build the package
 echo "Building package $package (version $version)"
 cd $package-$version
+# 32 bit package
+#dpkg-buildpackage -ai386 -us -uc -d
+# 64 bit package
 dpkg-buildpackage -us -uc -d
+
