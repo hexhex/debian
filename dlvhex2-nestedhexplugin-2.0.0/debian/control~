@@ -1,0 +1,16 @@
+Source: dlvhex2-nestedhexplugin
+Priority: optional
+Maintainer: Christoph Redl <redl@kr.tuwien.ac.at>
+Build-Depends: quilt (>= 0.46-7~), debhelper (>= 7), autotools-dev,
+ pkg-config, libdlvhex2-base-dev, libboost-all-dev (>= 1.54)
+Standards-Version: 3.9.1
+Section: libs
+Homepage: http://www.kr.tuwien.ac.at/research/systems/dlvhex/
+
+Package: dlvhex2-nestedhexplugin
+Section: libs
+Architecture: any
+Depends: dlvhex2, ${shlibs:Depends}, ${misc:Depends}
+Enhances: dlvhex2
+Description: dlvhex2 script plugin
+ The script plugin for dlvhex2.

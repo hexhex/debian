@@ -6,6 +6,7 @@ if [[ $1 -eq 1 ]] && [[ "$1" == "all" ]]; then
 #	./buildpackage "dlvhex2-dlliteplugin" "2.0.0"
 	./buildpackage "dlvhex2-dlplugin" "2.0.0"
 	./buildpackage "dlvhex2-mcsieplugin" "2.0.0"
+	./buildpackage "dlvhex2-nestedhexplugin" "2.0.0"
 	./buildpackage "dlvhex2-stringplugin" "2.0.0"
 	./buildpackage "dlvhex2-scriptplugin" "2.0.0"
 	exit 0
@@ -43,6 +44,8 @@ if [ ! -f ${package}_$version.orig.tar.gz ]; then
 		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-dlplugin/$version/dlvhex-dlplugin-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	elif [[ "$package" == "dlvhex2-mcsieplugin" ]]; then
 		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-mcsieplugin/$version/dlvhex-mcsieplugin-$version.tar.gz -O ${package}_$version.orig.tar.gz
+	elif [[ "$package" == "dlvhex2-nestedhexplugin" ]]; then
+		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-mcsieplugin/$version/dlvhex-nestedhexplugin-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	elif [[ "$package" == "dlvhex2-scriptplugin" ]]; then
 		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-scriptplugin/$version/dlvhex-scriptplugin-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	elif [[ "$package" == "dlvhex2-stringplugin" ]]; then
