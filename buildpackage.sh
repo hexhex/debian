@@ -1,13 +1,27 @@
+if [[ $1 -eq 1 ]] && [[ "$1" == "all" ]]; then
+	./buildpackage "dlvhex2" "2.4.0"
+	./buildpackage "dlvhex2-aggregateplugin" "2.0.0"
+#	./buildpackage "dlvhex2-dlliteplugin" "2.0.0"
+	./buildpackage "dlvhex2-dlplugin" "2.0.0"
+	./buildpackage "dlvhex2-mcsieplugin" "2.0.0"
+	./buildpackage "dlvhex2-stringplugin" "2.0.0"
+	./buildpackage "dlvhex2-scriptplugin" "2.0.0"
+	exit 0
+fi
 if [[ $# -ne 2 ]]; then
 	echo "This script expects the package name and the package version as parameters"
 	echo "Supported packages and versions:"
 	echo "   dlvhex2                         (versions: 2.4.0)"
 	echo "   dlvhex2-aggregateplugin         (versions: 2.0.0)"
-	echo "   dlvhex2-dlliteplugin            (versions: 2.0.0)"
+#	echo "   dlvhex2-dlliteplugin            (versions: 2.0.0)"
 	echo "   dlvhex2-dlplugin                (versions: 2.0.0)"
 	echo "   dlvhex2-mcsieplugin             (versions: 2.0.0)"
 	echo "   dlvhex2-stringplugin            (versions: 2.0.0)"
 	echo "   dlvhex2-scriptplugin            (versions: 2.0.0)"
+	echo ""
+	echo "The call"
+	echo "   ./buildpackage all"
+	echo "builds the most recent version of all supported packages"
 	exit 1
 fi
 package=$1
@@ -21,8 +35,8 @@ if [ ! -f ${package}_$version.orig.tar.gz ]; then
 		wget http://sourceforge.net/projects/dlvhex/files/dlvhex/$version/dlvhex-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	elif [[ "$package" == "dlvhex2-aggregateplugin" ]]; then
 		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-aggregateplugin/$version/dlvhex-aggregateplugin-$version.tar.gz -O ${package}_$version.orig.tar.gz
-	elif [[ "$package" == "dlvhex2-dlliteplugin" ]]; then
-		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-dlliteplugin/$version/dlvhex-dlliteplugin-$version.tar.gz -O ${package}_$version.orig.tar.gz
+#	elif [[ "$package" == "dlvhex2-dlliteplugin" ]]; then
+#		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-dlliteplugin/$version/dlvhex-dlliteplugin-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	elif [[ "$package" == "dlvhex2-dlplugin" ]]; then
 		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-dlplugin/$version/dlvhex-dlplugin-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	elif [[ "$package" == "dlvhex2-mcsieplugin" ]]; then
