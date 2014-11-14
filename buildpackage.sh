@@ -19,6 +19,7 @@ if [[ $# -ne 2 ]]; then
 #	echo "   dlvhex2-dlliteplugin            (versions: 2.0.0)"
 	echo "   dlvhex2-dlplugin                (versions: 2.0.0)"
 	echo "   dlvhex2-mcsieplugin             (versions: 2.0.0)"
+	echo "   dlvhex2-nestedhexplugin         (versions: 2.0.0)"
 	echo "   dlvhex2-stringplugin            (versions: 2.0.0)"
 	echo "   dlvhex2-scriptplugin            (versions: 2.0.0)"
 	echo ""
