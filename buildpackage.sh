@@ -36,21 +36,21 @@ if [ ! -f ${package}_$version.orig.tar.gz ]; then
 	# no: download it
 	echo "Sourcecode does not exist, trying to download package $package"
 	if [[ "$package" == "dlvhex2" ]]; then
-		wget http://sourceforge.net/projects/dlvhex/files/dlvhex/$version/dlvhex-$version.tar.gz -O ${package}_$version.orig.tar.gz
+		wget http://sourceforge.net/projects/dlvhex/files/dlvhex/$version/${package}-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	elif [[ "$package" == "dlvhex2-aggregateplugin" ]]; then
-		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-aggregateplugin/$version/dlvhex-aggregateplugin-$version.tar.gz -O ${package}_$version.orig.tar.gz
+		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-aggregateplugin/$version/${package}-$version.tar.gz -O ${package}_$version.orig.tar.gz
 #	elif [[ "$package" == "dlvhex2-dlliteplugin" ]]; then
 #		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-dlliteplugin/$version/dlvhex-dlliteplugin-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	elif [[ "$package" == "dlvhex2-dlplugin" ]]; then
-		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-dlplugin/$version/dlvhex-dlplugin-$version.tar.gz -O ${package}_$version.orig.tar.gz
+		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-dlplugin/$version/${package}-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	elif [[ "$package" == "dlvhex2-mcsieplugin" ]]; then
-		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-mcsieplugin/$version/dlvhex-mcsieplugin-$version.tar.gz -O ${package}_$version.orig.tar.gz
+		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-mcsieplugin/$version/${package}-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	elif [[ "$package" == "dlvhex2-nestedhexplugin" ]]; then
-		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-mcsieplugin/$version/dlvhex-nestedhexplugin-$version.tar.gz -O ${package}_$version.orig.tar.gz
+		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-mcsieplugin/$version/${package}-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	elif [[ "$package" == "dlvhex2-scriptplugin" ]]; then
-		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-scriptplugin/$version/dlvhex-scriptplugin-$version.tar.gz -O ${package}_$version.orig.tar.gz
+		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-scriptplugin/$version/${package}-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	elif [[ "$package" == "dlvhex2-stringplugin" ]]; then
-		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-stringplugin/$version/dlvhex-stringplugin-$version.tar.gz -O ${package}_$version.orig.tar.gz
+		wget http://sourceforge.net/projects/dlvhex/files/dlvhex-stringplugin/$version/${package}-$version.tar.gz -O ${package}_$version.orig.tar.gz
 	else
 		echo "Unknown package: $package"
 		exit 1
