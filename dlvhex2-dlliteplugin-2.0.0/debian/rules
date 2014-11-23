@@ -12,43 +12,10 @@
 # turn off test suite for now
 export DEB_BUILD_OPTIONS=nocheck
 
-# This has to be exported to make some magic below work.
-export DH_OPTIONS
-
 override_dh_usrlocal:
 
-build: build-stamp
-build-stamp:
-	dh_testdir
+override_dh_auto_configure:
+	dh_auto_configure -- --with-boost=/home/redl/boost_1_55_0_install 
 
-	dh_auto_configure -- PATH=.:$(PATH)
-	$(MAKE) all
-
-	touch build-stamp
-
-clean:
-	dh --with quilt $@
-
-
-install:
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-
-	$(MAKE) install DESTDIR=`pwd`/debian/tmp
-
-	dh_install
-
-
-binary-indep: build install
-	dh --with quilt $@
-
-
-binary-arch: build install
-	dh --with quilt $@
-
-
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install
+%:
+	dh --with quilt  $@
